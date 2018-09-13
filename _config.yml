@@ -81,3 +81,8 @@ deploy:
   type: git
   repo: https://github.com/Guaidaodl/guaidaodl.github.io
   branch: master
+
+# Markdown Style
+marked:
+  gfm: true
+  breaks: false
