@@ -86,3 +86,10 @@ deploy:
 marked:
   gfm: true
   breaks: false
+
+# Feed
+feed:
+  type: rss2
+  path: feed.xml
+  limit: 0
+  order_by: -date
