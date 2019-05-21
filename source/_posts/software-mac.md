@@ -8,11 +8,8 @@ tags: [mac, tools]
 
 # 日常使用
 
-## Spotlight
-并没有使用 Mac 上大名鼎鼎的 Alfred, 主要是发现自己基本不会使用 Alfred 的 Workflow 功能.
-只是作为启动器的话, Spotlight 已经满足了我需求.
-
-- 替代品: Alfred, LauncherBar
+## Alfred ~~Spotlight~~
+使用过一段时间的 Spotlight 之后还是觉得 Alfred 更顺手, 免费版已经够用.
 
 ## Chrome
 浏览器的王者, 无敌的扩展与插件.
@@ -72,15 +69,13 @@ Mac 在很多方面做得不错, 但是在两个方面做得完全不如 Windows
 上网必备. 平常生活没有 Google 还可以, 写程序没有 Google 真的是很太难了. 面向 Github 编程和面向
 StackOverflow 编程都是依赖与 Google 的.
 
-## Visual Studio Code
-文字编辑的后起之秀, 微软的良心作品. 因为主要使用的语言是 Java, 所以并不需要在文字编辑器里做太重的任务,
-也就写写博客, 和偶尔写一些简单脚本. 装个 vim 插件就可以满足日常需要,
+## NeoVim, Emacs
+VSC 虽好, 但是无法再命令行中使用, NeoVim 是一个良好的补充. 现在的慢慢开始往 Eamcs + Evil 的转移,
+不过在超大文件上 Emacs 的性能和 Vim 差很多, 这时候还是需要使用 Vim
 
-## NeoVim
-VSC 虽好, 但是无法再命令行中使用, NeoVim 是一个良好的补充.
 
-## Iterm2 + Oh-my-zsh + AutoJump
-命令行增强, 一个好用的命令行是开发必备.
+## Iterm2 + Oh-my-zsh + z.lua
+命令行增强, 一个好用的命令行是开发必备. 相比 autojump 来说, z.lua 功能更强速度更快.
 
 ## Android Studio
 开发 Android 必备.
