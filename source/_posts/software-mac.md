@@ -8,11 +8,8 @@ tags: [mac, tools]
 
 # 日常使用
 
-## Spotlight
-并没有使用 Mac 上大名鼎鼎的 Alfred, 主要是发现自己基本不会使用 Alfred 的 Workflow 功能.
-只是作为启动器的话, Spotlight 已经满足了我需求.
-
-- 替代品: Alfred, LauncherBar
+## Alfred ~~Spotlight~~
+使用过一段时间的 Spotlight 之后还是觉得 Alfred 更顺手, 免费版已经够用.
 
 ## Chrome
 浏览器的王者, 无敌的扩展与插件.
@@ -31,15 +28,6 @@ tags: [mac, tools]
 LastPass 还有生成密码和记录简单笔记的功能, 十分实用, 价格也比 1Password 要便宜一点.
 
 - [官网](https://www.lastpass.com)
-
-## Divvy
-Mac 在很多方面做得不错, 但是在两个方面做得完全不如 Windows. 一个是文件管理, Finder 比 Windows
-上的 Explorer 差了不少, 更不用说 Windows 还有 TotalCommander 这种神器.
-
-另一个是窗口管理, Mac 调整窗口大小十分困难, 没有 Windows 上贴边直接占一个位置的功能. 有了 Divvy
-就可以方便地调整大小了. 建议在 AppStore 上直接购买.
-
-- [Divvy - App Store](https://itunes.apple.com/cn/app/divvy-window-manager/id413857545?l=en&mt=12)
 
 ## Paste
 剪贴板管理工具, 可以记录文字和图片的复制记录. 功能比较简单, 但是是我见过颜值最高的同类软件.
@@ -63,8 +51,20 @@ Mac 在很多方面做得不错, 但是在两个方面做得完全不如 Windows
 ## XMind Zen
 感觉应该是 XMind 抄袭 MindNode 之作, 但是是跨平台的. 免费版已经够用, 配合坚果云可以实现多平台同步.
 
-## EverNote
-主要用来收集一些网上的文章和记一些速记. 配合 Chrome 的剪切插件特别方便.
+## Onenote ~EverNote~
+主要用来收集一些网上的文章和记一些速记. 配合 Chrome 的剪切插件特别方便. 相比 EverNote, 感觉 OneNote 
+更灵活一点.
+
+## HyperSwitch, Bartender, Divvy
+放在一起是因为我觉得这个应该是一个系统的基础功能, 而 Mac 却没有.
+
+Mac 在很多方面做得不错, 但是在两个方面做得完全不如 Windows. 一个是文件管理, Finder 比 Windows
+上的 Explorer 差了不少, 更不用说 Windows 还有 TotalCommander 这种神器.
+
+另一个是窗口管理, Mac 调整窗口大小十分困难, 没有 Windows 上贴边直接占一个位置的功能. 有了 Divvy
+就可以方便地调整大小了. 建议在 AppStore 上直接购买.
+
+- [Divvy - App Store](https://itunes.apple.com/cn/app/divvy-window-manager/id413857545?l=en&mt=12)
 
 # 开发
 
@@ -72,15 +72,23 @@ Mac 在很多方面做得不错, 但是在两个方面做得完全不如 Windows
 上网必备. 平常生活没有 Google 还可以, 写程序没有 Google 真的是很太难了. 面向 Github 编程和面向
 StackOverflow 编程都是依赖与 Google 的.
 
-## Visual Studio Code
-文字编辑的后起之秀, 微软的良心作品. 因为主要使用的语言是 Java, 所以并不需要在文字编辑器里做太重的任务,
-也就写写博客, 和偶尔写一些简单脚本. 装个 vim 插件就可以满足日常需要,
+## NeoVim, Emacs
+VSC 虽好, 但是无法再命令行中使用, NeoVim 是一个良好的补充. 现在的慢慢开始往 Eamcs + Evil 的转移,
+不过在超大文件上 Emacs 的性能和 Vim 差很多, 这时候还是需要使用 Vim
 
-## NeoVim
-VSC 虽好, 但是无法再命令行中使用, NeoVim 是一个良好的补充.
 
-## Iterm2 + Oh-my-zsh + AutoJump
-命令行增强, 一个好用的命令行是开发必备.
+## 命令行
+命令行增强, 一个好用的命令行是开发必备. zsh 要比 bash 强大得多, 再加上有 oh-my-zsh 这种开箱即用的
+配置. 真是爽.
+
+### zsh 的一些常用插件:
+- 主题: powerlevel 9k
+- 自动补全: zsh-autosuggestion
+
+### 其他命令行工具
+- fzf 交互性命令行.
+- z.lua 快速跳转.
+- ripgrep 用来替代 grep.
 
 ## Android Studio
 开发 Android 必备.
@@ -94,4 +102,3 @@ VSC 虽好, 但是无法再命令行中使用, NeoVim 是一个良好的补充.
 ## Dash
 文档查找器. 作者每年是一个新版本然后重新收费, 犹记得某一年作者在年度总结里写自己玩了半年的炉石,
 然后年底随便写写就出新版本了. 不过因为实在是太好用了, 每年依旧乖乖交费.
-
