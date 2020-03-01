@@ -1,6 +1,10 @@
 ---
 title: Android 开心明星脸 -- Redux(0) - 初体验
-tags: 'Android, Redux, MVVM'
+tags: 
+- Android
+- Redux
+- MVVM
+categories: dev
 date: 2020-02-23 23:47:41
 ---
 
@@ -30,10 +34,11 @@ MVVM 起步比较晚, 可参考的不是很多. 于是想从在 MVVM 上迭代�
 
 下面就正式开始, 因为相比 Angular.js, Redux 要简单得多, 所以先从 Redux 开始.
 
-# Redux
+# 学习
 
-关于 redux 的信息主要参考了 [深入浅出 React 和 Redux](https://book.douban.com/subject/27033213/) 
-这本书.
+关于 redux 的信息主要参考了 [深入浅出 React 和 Redux](https://book.douban.com/subject/27033213/) 这本书. 因为本人 JS 水平低下, 主要的知识都来自此书. 在每一篇的学习部分只会罗列一些 Redux 核心概念与涉及思路, 具体的如何使用的内容和相关代码建议各位参考此书或者网络上的其他资料.
+
+如果完全对 Redux 没有了解的话可能会觉得这部分的内容有一定的断裂感, 不好理解.
 
 ## Redux 的基本原则
 
