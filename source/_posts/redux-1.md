@@ -41,7 +41,7 @@ react-redux 就是其中一个, 该库主要是解决 react 组件如何和 redu
 
 其实可以把两个功能分开到不同的组件. 然后通过组合的方式来实现功能. 通常把负责与 Store 交互的组件叫做容器组件
 (Container Component), 负责渲染的组件成为展示组件(Presentational Component). 
-也叫聪明组件(Smart Component) 和傻瓜组件(Dumb Component). 如果了解 Flutter, 这两种组件可以映射到
+也叫聪明组件(Smart Component) 和傻瓜组件(Dumb Component). 如果了解 Flutter, 这两种组件差不多可以映射到
 StatefulWidge 和 StatelessWidget.
 
 通过把一个简单的组件划分成两层以后, 实际负责渲染的组件跟 Store 解耦. 更容易拿来复用. 
@@ -49,7 +49,11 @@ StatefulWidge 和 StatelessWidget.
 ### Provider
 React 有一个叫 context 特性, 只要一棵组件树的根节点提供了 Context, 那其他的子节点就可以访问到这个 Context.
 react-redux 这个库利用了这个特性, 将组件树的根节点换成了一个定义好的 Provider, 这个 Provider
-的功能就是提供一个含有 store 的 Context.
+的功能就是提供一个含有 store 的 Context. 整个流程可以概括为下面的图: Provider
+提供含有 Store 的 Context, 然后 Smart Component 从 Context 中获取 State, 然后再把 
+State 转化成 Component 的 props.
+
+![图片](/images/Redux-1-2.png)
 
 经过上面的两个操作. 像上一个 demo 那种简单的组件结构变化如下.
 
@@ -84,9 +88,15 @@ react-redux 这个库利用了这个特性, 将组件树的根节点换成了一
   ``` javascript
   connect(mapStateToProps, mapDispatchToProps)(Counter)
   ```
-  这种操作在静态类型的语言中实在是太难..别说是 Java, 我估计 Dart 都做不到.
-  
-所以这次的模仿只能透过现象看本质. 看能不能模仿一下设计思路了.
+  这种操作在静态类型的语言中实在是太难..别说是 Java, 我估计 Dart 都做不到. 
+
+基于上面的两个原因, 想了挺多办法来模仿, 不过最后都没有办法达到 react-redux 这种浑然天成的感觉.
+下面是一些尝试的思路.
+
+## Conainter Component
+Container 从指责分析其实就是一个典型 Adapter. 将 State 转换成 View 的 props, 但是在 Android
+中, 这样的指责会分散在各种地方, 比如 Activity, Fragment, RecyclerView 的 Adapter, 甚至是
+Databingding 的 xml 文件中. 没有一个统一的方案.
 
 ## Provider
 前面提到 Provider 其实就是利用 context 这个特性. 正好 Android 当中的所有 View 也都有 context 
@@ -122,5 +132,11 @@ if (context is StoreProvider<CounterStore>) {
 
 但是呢, 前面又说到 Containter Component 如果用 View 来模仿的话, 性能会有问题. Presentational
 Component 又不会有读取 store 的操作, 这个方案的价值很低.
+
+# 总结
+
+这次的尝试比较失败. 想要借鉴方案比较困难. 总的来说 redux 就是利用 context 
+让这个组件树里的组件都可以比较容易地读取 Store. 只要可以实现这个目标也不同太多纠结于方案的问题,
+这部分的内容先放下, 后面有时间再想一套基于依赖注入的方案.
 
 
